@@ -2,8 +2,14 @@ FROM eclipsebasyx/aas-environment:2.0.0-SNAPSHOT
 
 COPY basyx/application.properties /application/application.properties
 
-RUN mkdir -p /application/aas
+RUN mkdir -p /application/aas/companies \
+    /application/aas/Requirements \
+    /application/aas/Resources \
+    /application/aas/Services
 
-COPY AAS/ /application/aas/
+COPY AAS/companies/ /application/aas/companies/
+COPY AAS/Requirements/ /application/aas/Requirements/
+COPY AAS/Resources/ /application/aas/Resources/
+COPY AAS/Services/ /application/aas/Services/
 
 EXPOSE 8081
