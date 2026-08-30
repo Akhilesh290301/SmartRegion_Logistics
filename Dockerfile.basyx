@@ -1,6 +1,9 @@
 FROM eclipsebasyx/aas-environment:2.0.0-SNAPSHOT
 
 COPY basyx/application.properties /application/application.properties
-COPY AAS/SmartRegion_Logistics_Provider.aasx /application/aas/SmartRegion_Logistics_Provider.aasx
+
+RUN mkdir -p /application/aas
+
+COPY AAS/ /application/aas/
 
 EXPOSE 8081
