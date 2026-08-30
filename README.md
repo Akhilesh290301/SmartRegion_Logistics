@@ -11,7 +11,7 @@ cd ~/Documents/SmartRegion_BaSyx
 docker compose ps
 ```
 
-Copy this project folder to your Mac, open it in PyCharm, then:
+
 
 ```bash
 cd SmartRegion_Streamlit_App
