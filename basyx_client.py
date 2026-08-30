@@ -1,9 +1,10 @@
 import re
 import requests
-
+import os
 
 class BasyxClient:
-    def __init__(self, base_url="http://localhost:8081", timeout=15):
+    def __init__(self, base_url=None, timeout=15):
+        base_url = base_url or os.getenv("BASYX_URL", "http://localhost:8081")
         self.base_url = base_url.rstrip("/")
         self.timeout = timeout
 
