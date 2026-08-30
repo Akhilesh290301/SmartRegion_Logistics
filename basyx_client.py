@@ -5,7 +5,7 @@ import streamlit as st
 
 
 class BasyxClient:
-    def __init__(self, base_url=None, timeout=15):
+    def __init__(self, base_url=None, timeout=90):
 
         if base_url is None:
             try:
